@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Stock business object -->
+   <bean id="ferBo" class="com.rs.fer.bo.impl.FerBoImpl" >
+   		<property name="ferDao" ref="ferDao" />
+   </bean>
+ 
+   <!-- Stock Data Access Object -->
+  <!--  <bean id="ferDao" class="com.rs.fer.dao.impl.FerDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean> -->
+   
+   <bean id="ferDao" class="com.rs.fer.dao.impl.FerDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   		
+</beans>
